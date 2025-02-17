@@ -1,5 +1,7 @@
 import TechStackItem from "../../components/TechStackItem"
 
+export const dynamic = "force-dynamic";
+
 export default function Colophon() {
   return (
     <div className="space-y-4 p-8">

@@ -1,8 +1,9 @@
 {
+  "/api/auth/token/route": "app/api/auth/token/route.js",
   "/api/spotify/track/route": "app/api/spotify/track/route.js",
   "/api/spotify/recent/route": "app/api/spotify/recent/route.js",
-  "/api/auth/token/route": "app/api/auth/token/route.js",
+  "/colophon/page": "app/colophon/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/projects/page": "app/projects/page.js"
+  "/projects/page": "app/projects/page.js",
+  "/page": "app/page.js"
 }

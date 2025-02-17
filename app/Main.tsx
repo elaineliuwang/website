@@ -13,6 +13,7 @@ import { useState } from 'react'
 import SpotifySong from '../components/SpotifySong'
 import SpotifyRecent from '../components/SpotifyRecent'
 
+
 const MAX_DISPLAY = 5
 
 export default function Home() {
