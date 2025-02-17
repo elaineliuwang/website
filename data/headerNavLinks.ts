@@ -1,7 +1,7 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
   { href: '/projects', title: 'Projects' },
-  // { href: '/colophon', title: 'Colophon' },
+  { href: '/colophon', title: '' },
 ]
 
 export default headerNavLinks

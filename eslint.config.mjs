@@ -39,7 +39,7 @@ export default [
 
       parser: tsParser,
       ecmaVersion: 5,
-      sourceType: 'commonjs',
+      sourceType: 'modules',
 
       parserOptions: {
         project: true,

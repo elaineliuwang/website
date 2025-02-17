@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Track } from '@/data/tracks.interface'
+import { Track } from '../data/tracks.interface'
 
 export default function SpotifyRecent() {
   const [track, setTrack] = useState<Track | null>(null)
