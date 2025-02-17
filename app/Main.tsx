@@ -9,17 +9,12 @@ import { coreContent } from 'pliny/utils/contentlayer'
 import { experiences } from '../data/experiences'
 import projectsData from '../data/projectsData'
 import { songTrackIDs } from '../data/songTrackIDs'
-import { useState } from 'react'
 import SpotifySong from '../components/SpotifySong'
 import SpotifyRecent from '../components/SpotifyRecent'
-
-
-const MAX_DISPLAY = 5
 
 export default function Home() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
   const mainContent = coreContent(author)
-  const [timeAgo, setTimeAgo] = useState<string | null>(null)
 
   return (
     <>

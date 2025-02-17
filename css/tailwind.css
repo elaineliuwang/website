@@ -3,6 +3,12 @@
 @source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* @tailwind base; */
+/* @config '../tailwind.config.js';
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 /* Core theme configuration */
 @theme {
   /* Font families */

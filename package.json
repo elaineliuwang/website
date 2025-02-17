@@ -72,6 +72,7 @@
   },
   "devDependencies": {
     "@apollo/server-plugin-landing-page-graphql-playground": "^4.0.0",
+    "@babel/eslint-parser": "^7.26.8",
     "@graphql-codegen/add": "^3.2.1",
     "@graphql-codegen/cli": "2.13.11",
     "@graphql-codegen/typescript": "2.8.1",

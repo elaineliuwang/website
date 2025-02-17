@@ -20,6 +20,7 @@ export async function GET() {
 
     return NextResponse.json({ access_token: data.access_token })
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ error: 'Failed to refresh access token' }, { status: 500 })
   }
 }

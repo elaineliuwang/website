@@ -52,6 +52,7 @@ export async function GET() {
       time_ago: timeAgo(lastTrack.played_at),
     })
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ error: 'Failed to fetch Spotify status' }, { status: 500 })
   }
 }

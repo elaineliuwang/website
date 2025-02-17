@@ -23,6 +23,7 @@ export async function GET(req: Request) {
 
     return NextResponse.json(data)
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ error: 'Failed to fetch track' }, { status: 500 })
   }
 }
