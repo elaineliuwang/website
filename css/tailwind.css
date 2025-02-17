@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-@import '../tailwind.config.js';
-@import '../node_modules/pliny';
+@config '../tailwind.config.js';
+@source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Core theme configuration */
