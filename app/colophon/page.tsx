@@ -32,7 +32,7 @@ export default function Colophon() {
             />
           </li>
           <li>
-            Hosted on <TechStackItem name="GitHub Pages" url="https://pages.github.com/" />
+            Hosted on <TechStackItem name="Vercel" url="https://vercel.com/" />
           </li>
         </ul>
       </div>
