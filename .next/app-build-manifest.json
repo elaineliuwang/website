@@ -27,7 +27,7 @@
       "static/chunks/587-565e23befd2df6aa.js",
       "static/chunks/main-app-255b9d0689cefeb9.js",
       "static/css/7252a39790f448b9.css",
-      "static/css/124d80ffb80642ce.css",
+      "static/css/66dbe4a5617ebcbb.css",
       "static/chunks/c16f53c3-87dce7c0ee77446d.js",
       "static/chunks/173-c2a9a9d4370a0c81.js",
       "static/chunks/427-4aefd8eae2db85fa.js",
@@ -40,6 +40,15 @@
       "static/chunks/main-app-255b9d0689cefeb9.js",
       "static/chunks/173-c2a9a9d4370a0c81.js",
       "static/chunks/app/not-found-84906efe97b9aa8c.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-0fceaba05093ac98.js",
+      "static/chunks/4bd1b696-f4f9430990aff9ab.js",
+      "static/chunks/587-565e23befd2df6aa.js",
+      "static/chunks/main-app-255b9d0689cefeb9.js",
+      "static/chunks/173-c2a9a9d4370a0c81.js",
+      "static/chunks/970-9b1230a165cbb89f.js",
+      "static/chunks/app/page-feb7c1e7804d3c3e.js"
     ],
     "/colophon/page": [
       "static/chunks/webpack-0fceaba05093ac98.js",
@@ -63,15 +72,6 @@
       "static/chunks/173-c2a9a9d4370a0c81.js",
       "static/chunks/970-9b1230a165cbb89f.js",
       "static/chunks/app/projects/page-ef0b6ee850d1b7ff.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-0fceaba05093ac98.js",
-      "static/chunks/4bd1b696-f4f9430990aff9ab.js",
-      "static/chunks/587-565e23befd2df6aa.js",
-      "static/chunks/main-app-255b9d0689cefeb9.js",
-      "static/chunks/173-c2a9a9d4370a0c81.js",
-      "static/chunks/970-9b1230a165cbb89f.js",
-      "static/chunks/app/page-feb7c1e7804d3c3e.js"
     ]
   }
 }

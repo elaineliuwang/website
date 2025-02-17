@@ -9353,9 +9353,9 @@ next-themes@^0.3.0:
   resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.3.0.tgz"
   integrity sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==
 
-next@^15.2.0-canary.63:
+next@15.2.0-canary.63:
   version "15.2.0-canary.63"
-  resolved "https://registry.npmjs.org/next/-/next-15.2.0-canary.63.tgz"
+  resolved "https://registry.yarnpkg.com/next/-/next-15.2.0-canary.63.tgz#876f6e5bf906363709eef253a7fa5dfdff1d102f"
   integrity sha512-zg+1agjMps87e+DBe5KY7ytCBJWDUJeEsctFBh9e39+Z82G02MWSO7TNqAA/vvkUamcFxw5rWnlgQVvueShM6Q==
   dependencies:
     "@next/env" "15.2.0-canary.63"
