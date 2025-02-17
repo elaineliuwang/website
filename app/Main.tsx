@@ -2,16 +2,17 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Authors, allAuthors } from 'contentlayer/generated'
+import { Authors, allAuthors } from '.contentlayer/generated'
+// import { Authors } from '../contentlayer.config'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import AuthorLayout from '@/layouts/AuthorLayout'
+import AuthorLayout from '../layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { experiences } from '@/data/experiences'
-import projectsData from '@/data/projectsData'
-import { songTrackIDs } from '@/data/songTrackIDs'
+import { experiences } from '../data/experiences'
+import projectsData from '../data/projectsData'
+import { songTrackIDs } from '../data/songTrackIDs'
 import { useState } from 'react'
-import SpotifySong from '@/components/SpotifySong'
-import SpotifyRecent from '@/components/SpotifyRecent'
+import SpotifySong from '../components/SpotifySong'
+import SpotifyRecent from '../components/SpotifyRecent'
 
 const MAX_DISPLAY = 5
 

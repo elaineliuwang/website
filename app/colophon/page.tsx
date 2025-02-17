@@ -1,4 +1,4 @@
-import TechStackItem from '@/components/TechStackItem'
+import TechStackItem from "../../components/TechStackItem"
 
 export default function Colophon() {
   return (
