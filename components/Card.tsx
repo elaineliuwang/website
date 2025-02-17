@@ -1,5 +1,5 @@
-import Image from './Image'
-import Link from './Link'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Card = ({ title, description, techStack, imgSrc, href }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
@@ -43,6 +43,7 @@ const Card = ({ title, description, techStack, imgSrc, href }) => (
         {href && (
           <Link
             href={href}
+            target="_blank"
             className="text-base leading-6 font-medium text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300"
             aria-label={`Link to ${title}`}
           >

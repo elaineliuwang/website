@@ -1,6 +1,6 @@
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Link from './Link'
+import siteMetadata from '../data/siteMetadata'
+import headerNavLinks from '../data/headerNavLinks'
+import Link from 'next/link'
 import MobileNav from './MobileNav'
 
 const Header = () => {

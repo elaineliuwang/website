@@ -1,4 +1,4 @@
-import siteMetadata from '@/data/siteMetadata'
+import siteMetadata from '../data/siteMetadata'
 import ThemeSwitch from './ThemeSwitch'
 
 export default function Footer() {

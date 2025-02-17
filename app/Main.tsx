@@ -2,16 +2,16 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Authors, allAuthors } from 'contentlayer/generated'
+import { Authors, allAuthors } from '../.contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import AuthorLayout from '@/layouts/AuthorLayout'
+import AuthorLayout from '../layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { experiences } from '@/data/experiences'
-import projectsData from '@/data/projectsData'
-import { songTrackIDs } from '@/data/songTrackIDs'
+import { experiences } from '../data/experiences'
+import projectsData from '../data/projectsData'
+import { songTrackIDs } from '../data/songTrackIDs'
 import { useState } from 'react'
-import SpotifySong from '@/components/SpotifySong'
-import SpotifyRecent from '@/components/SpotifyRecent'
+import SpotifySong from '../components/SpotifySong'
+import SpotifyRecent from '../components/SpotifyRecent'
 
 const MAX_DISPLAY = 5
 
@@ -126,7 +126,7 @@ export default function Home() {
                       </div>
                     </div>
                     {/* Song List */}
-                    <h1 className="text-md mt-12 font-semibold italic">Recent Jams</h1>
+                    <h1 className="text-md mt-12 font-semibold italic">Recent Favs</h1>
                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
                       {songTrackIDs.map((trackId) => (
                         <div key={trackId} className="w-full">
