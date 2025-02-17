@@ -17,7 +17,7 @@ function timeAgo(timestamp) {
 export async function GET() {
   try {
     // Fetch new access token
-    const tokenRes = await fetch('http://localhost:3000/api/auth/token')
+    const tokenRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/token`)
     const { access_token } = await tokenRes.json()
 
     // Check if currently playing
