@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://elaineliuwang.com
-
-# Sitemaps
-Sitemap: https://elaineliuwang.com/sitemap.xml
