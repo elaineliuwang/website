@@ -10,12 +10,8 @@
 /.next/
 /out/
 
-# production
+# prod
 /build
-
-# misc
-.DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -31,6 +27,14 @@ yarn-error.log*
 .vercel
 
 # sitemaps
-robots.txt
 sitemap.xml
 sitemap-*.xml
+
+# other folders
+.contentlayer
+.vscode
+.yarn
+
+# misc
+.DS_Store
+*.pem
