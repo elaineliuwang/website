@@ -8,10 +8,10 @@ function timeAgo(timestamp) {
   const playedAt = new Date(timestamp)
   const secondsAgo = Math.floor((now.getTime() - playedAt.getTime()) / 1000)
 
-  if (secondsAgo < 60) return `${secondsAgo} seconds ago`
-  if (secondsAgo < 3600) return `${Math.floor(secondsAgo / 60)} minutes ago`
-  if (secondsAgo < 86400) return `${Math.floor(secondsAgo / 3600)} hours ago`
-  return `${Math.floor(secondsAgo / 86400)} days ago`
+  if (secondsAgo < 60) return `${secondsAgo} second${secondsAgo == 1 ? '': 's'} ago`
+  if (secondsAgo < 3600) return `${Math.floor(secondsAgo / 60)} minute${Math.floor(secondsAgo / 60) == 1 ? '': 's'} ago`
+  if (secondsAgo < 86400) return `${Math.floor(secondsAgo / 3600)} hour${Math.floor(secondsAgo / 3600) == 1 ? '': 's'} ago`
+  return `${Math.floor(secondsAgo / 86400)} day${Math.floor(secondsAgo / 86400) == 1 ? '': 's'} ago`
 }
 
 export async function GET() {
@@ -23,7 +23,7 @@ export async function GET() {
 
     // Check if currently playing
     const nowPlayingRes = await fetch(NOW_PLAYING_ENDPOINT, {
-      headers: { Authorization: `Bearer ${access_token}` },
+      headers: { Authorization: `Bearer ${access_token}` }
     })
 
     if (nowPlayingRes.ok) {

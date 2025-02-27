@@ -122,7 +122,7 @@ export default function Home() {
                       </div>
                     </div>
                     {/* Song List */}
-                    <h1 className="text-md mt-12 font-semibold italic">Recent Favs</h1>
+                    <h1 className="text-md mt-12 font-semibold italic">Recent Jams</h1>
                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
                       {songTrackIDs.map((trackId) => (
                         <div key={trackId} className="w-full">

@@ -3,7 +3,6 @@ import Card from '../../components/Card'
 import { genPageMetadata } from '../seo'
 
 export const dynamic = "force-dynamic";
-
 export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default function Projects() {

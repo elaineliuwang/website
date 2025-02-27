@@ -14,7 +14,7 @@ export default function SpotifyRecent() {
       const data = await res.json()
 
       setTrack(data.track)
-      setTimeAgo(data.time_ago) // "Now" if currently playing, else "X hours ago"
+      setTimeAgo(data.time_ago)
     }
 
     fetchRecentTrack()
@@ -27,12 +27,16 @@ export default function SpotifyRecent() {
   return (
     <div className="flex items-center space-x-4">
       <div className="flex flex-col items-center space-y-2">
-        {/* Pill */}
-        <span
-          className={`mb-3 rounded-full px-2 py-1 text-xs font-semibold ${isPlaying ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-500 dark:bg-gray-500 dark:text-gray-200'}`}
-        >
-          {isPlaying ? 'Now Playing' : timeAgo}
-        </span>
+      {/* Pill */}
+      <span className={
+        `mb-3 rounded-full px-2 py-1 text-xs font-semibold bg-gray-200 text-gray-500 
+        dark:bg-gray-700 dark:text-gray-300 flex items-center gap-1`}>
+        {isPlaying && (
+          <span className="h-2 w-2 bg-indigo-500 rounded-full animate-pulse"></span>
+        )}
+        {isPlaying ? 'Now Playing' : timeAgo}
+      </span>
+
 
         {/* Album Cover */}
         <a
