@@ -40,6 +40,7 @@
     "github-slugger": "^2.0.0",
     "graphql": "^16.6.0",
     "hast-util-from-html-isomorphic": "^2.0.0",
+    "html-to-text": "^9.0.5",
     "lru-cache": "^7.14.0",
     "mapbox-gl": "^2.11.1",
     "marked": "^4.0.18",

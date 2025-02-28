@@ -11,6 +11,7 @@ import projectsData from '../data/projectsData'
 import { songTrackIDs } from '../data/songTrackIDs'
 import SpotifySong from '../components/SpotifySong'
 import SpotifyRecent from '../components/SpotifyRecent'
+import { stripHtml } from './utils'
 
 export default function Home() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
@@ -52,7 +53,7 @@ export default function Home() {
                           {project.title}
                         </Link>
                         <div className="text-gray-500 dark:text-gray-400">
-                          {project.description.split('.')[0] + '.'}
+                          {stripHtml(project.description).split(".")[0] + "."}
                         </div>
                       </div>
                     </div>
