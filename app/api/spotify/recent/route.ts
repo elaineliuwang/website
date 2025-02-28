@@ -26,32 +26,44 @@ export async function GET() {
       headers: { Authorization: `Bearer ${access_token}` }
     })
 
-    if (nowPlayingRes.ok) {
-      const nowPlayingData = await nowPlayingRes.json()
-      if (nowPlayingData.is_playing) {
-        return NextResponse.json({
-          track: nowPlayingData.item,
-          time_ago: 'Now',
-        })
+    if (nowPlayingRes.status == 204){
+      console.log("no currently active playback, fetching recently played...");
+
+      // If not playing, fetch recently played track
+      const recentlyPlayedRes = await fetch(`${RECENTLY_PLAYED_ENDPOINT}?limit=1`, {
+        headers: { Authorization: `Bearer ${access_token}` },
+      })
+
+      if (!recentlyPlayedRes.ok) {
+        console.error("failed to fetch recently played:", recentlyPlayedRes.statusText);
+        return NextResponse.json({ error: "failed to fetch recently played" }, { status: 500 });
       }
+
+      const data = await recentlyPlayedRes.json()
+      if (!recentlyPlayedRes.ok) throw new Error(data.error)
+
+      const lastTrack = data.items[0]
+      if (!lastTrack){
+        return NextResponse.json({ error: "no recently played track found" }, { status: 404 });
+      }
+
+      return NextResponse.json({
+        track: lastTrack.track,
+        played_at: lastTrack.played_at,
+        time_ago: timeAgo(lastTrack.played_at),
+      })
     }
 
-    // If not playing, fetch recently played track
-    const recentlyPlayedRes = await fetch(`${RECENTLY_PLAYED_ENDPOINT}?limit=1`, {
-      headers: { Authorization: `Bearer ${access_token}` },
-    })
+    if (nowPlayingRes.ok) {
+      const nowPlayingData = await nowPlayingRes.json();
+      return NextResponse.json({
+        track: nowPlayingData.item,
+        time_ago: nowPlayingData.is_playing ? "Now" : timeAgo(nowPlayingData.timestamp),
+      });
+    }
 
-    const data = await recentlyPlayedRes.json()
-    if (!recentlyPlayedRes.ok) throw new Error(data.error)
+    return NextResponse.json({ error: "Unexpected response from Spotify" }, { status: 500 });
 
-    const lastTrack = data.items[0]
-    if (!lastTrack) throw new Error('No recently played track found')
-
-    return NextResponse.json({
-      track: lastTrack.track,
-      played_at: lastTrack.played_at,
-      time_ago: timeAgo(lastTrack.played_at),
-    })
   } catch (error) {
     console.log(error)
     return NextResponse.json({ error: 'Failed to fetch Spotify status' }, { status: 500 })
