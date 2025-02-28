@@ -5,7 +5,7 @@ const Card = ({ title, description, techStack, imgSrc, href }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div className="overflow-hidden rounded-md border-2 border-gray-200/60 dark:border-gray-700/60">
       {imgSrc && (
-        <Link href={href || '#'} aria-label={`Link to ${title}`}>
+        <Link href={href || '#'} aria-label={`Link to ${title}`} target="_blank">
           <Image
             alt={title}
             src={imgSrc}
