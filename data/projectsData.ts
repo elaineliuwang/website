@@ -14,7 +14,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: 'sustain.',
-    description: `A full-stack web application that connects environmentally conscious consumers with sustainable brands. Instead of prioritizing brand names, users can easily discover alternative products that align with their values. The app simplifies the shopping experience with seamless browsing and personalized recommendations.`,
+    description: `A full-stack <a href="https://sustain-ten.vercel.app/" target="_blank" class="text-gray-400 hover:text-indigo-400">web application</a> that connects environmentally conscious consumers with sustainable brands. Instead of prioritizing brand names, users can easily discover alternative products that align with their values. The app simplifies the shopping experience with seamless browsing and personalized recommendations.`,
     techStack: [
       { tech: 'React/Next.js', note: 'frontend' },
       { tech: 'Convex', note: 'backend functionality, vector search' },
