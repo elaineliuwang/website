@@ -6,7 +6,7 @@ export default function Colophon() {
   return (
     <div className="space-y-4 p-8">
       <h1 className="text-2xl font-semibold">Colophon</h1>
-      <p className="text-lg text-gray-500 dark:text-gray-400">How I made this website.</p>
+      <p className="text-lg text-gray-500 dark:text-gray-400">how I made this website.</p>
       {/* Horizontal Divider */}
       <hr className="border-t border-gray-200 dark:border-gray-700" />
       <div className="mt-6 space-y-2">
@@ -29,7 +29,7 @@ export default function Colophon() {
           <li>
             Adapted from{' '}
             <TechStackItem
-              name="Tailwind Next.js Starter Blog"
+              name="Tailwind Starter Blog"
               url="https://github.com/timlrx/tailwind-nextjs-starter-blog?tab=readme-ov-file"
             />
           </li>

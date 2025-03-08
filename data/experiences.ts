@@ -10,7 +10,7 @@ export const experiences = [
     timeframe: '05/2024 - 08/2024',
   },
   {
-    company: 'MIT CAVE Lab',
+    company: 'MIT Center for Transportation & Logistics, CAVE Lab',
     role: 'Undergraduate Researcher',
     timeframe: '09/2023 - 05/2024',
   },
