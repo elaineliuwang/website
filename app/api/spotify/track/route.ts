@@ -10,8 +10,8 @@ export async function GET(req: Request) {
 
   try {
     // Fetch new access token (public site and local)
-    // const tokenRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/token`)
-    const tokenRes = await fetch(`${process.env.LOCAL_SITE_URL}/api/auth/token`)
+    const tokenRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/token`)
+    // const tokenRes = await fetch(`${process.env.LOCAL_SITE_URL}/api/auth/token`)
     const { access_token } = await tokenRes.json()
 
     // Fetch track details
