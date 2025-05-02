@@ -17,7 +17,7 @@ pnpm-lock.yaml
 # prod
 /build
 
-# debug
+# debug stuff
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
