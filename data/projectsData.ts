@@ -40,7 +40,7 @@ const projectsData: Project[] = [
   },
   {
     title: 'MobiScope',
-    description: `Worked with the City Science group to build a physical interface to explore the potential performance of ultra-lightweight autonomous shared vehicles in Cambridge. With the KPI models, stakeholders can analyze different system configurations, gaining insights into the impacts of these vehicles. Findings were <a href="https://www.mdpi.com/2825546" target="_blank" class="text-gray-400 hover:text-indigo-400">published</a> in the <em>Future Transportation</em> Journal in June 2024.`,
+    description: `Worked with the City Science group @ MIT Media Lab to build a physical interface that explores the performance of autonomous delivery vehicles in Cambridge, MA. With the KPI models, stakeholders can analyze different system configurations, gaining insights into the impacts of these vehicles. Findings were <a href="https://www.mdpi.com/2825546" target="_blank" class="text-gray-400 hover:text-indigo-400">published</a> in the <em>Future Transportation</em> Journal in June 2024.`,
     techStack: [
       { tech: 'Arduino', note: 'hardware' },
       { tech: 'GAMA Platform', note: 'data analysis and modeling' },

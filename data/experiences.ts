@@ -2,7 +2,7 @@ export const experiences = [
   {
     company: 'Amazon',
     role: 'Software Development Engineer Intern',
-    timeframe: 'Incoming 06/2025',
+    timeframe: '06/2025 - Now',
   },
   {
     company: 'Principal Financial Group',
@@ -10,7 +10,7 @@ export const experiences = [
     timeframe: '05/2024 - 08/2024',
   },
   {
-    company: 'MIT Center for Transportation & Logistics, CAVE Lab',
+    company: 'MIT Center for Transportation & Logistics [CAVE Lab]',
     role: 'Undergraduate Researcher',
     timeframe: '09/2023 - 05/2024',
   },
@@ -20,7 +20,7 @@ export const experiences = [
     timeframe: '06/2023 - 08/2023',
   },
   {
-    company: 'MIT Media Lab, City Science',
+    company: 'MIT Media Lab [City Science Group]',
     role: 'Undergraduate Researcher',
     timeframe: '01/2023 - 03/2023',
   },

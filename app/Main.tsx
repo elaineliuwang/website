@@ -8,10 +8,11 @@ import AuthorLayout from '../layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { experiences } from '../data/experiences'
 import projectsData from '../data/projectsData'
-import { songTrackIDs } from '../data/songTrackIDs'
+import { songTrackIDs } from '../data/songURLs'
 import SpotifySong from '../components/SpotifySong'
 import SpotifyRecent from '../components/SpotifyRecent'
 import { stripHtml } from './utils'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Home() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
@@ -35,7 +36,7 @@ export default function Home() {
                   </dd>
                 </dl>
                 <div className="space-y-5 xl:col-span-3">
-                  {projectsData.slice(0, 2).map((project, index) => (
+                  {projectsData.slice(0, 3).map((project, index) => (
                     <div key={index} className="flex items-center">
                       <Image
                         src={project.imgSrc || ''}
@@ -64,9 +65,6 @@ export default function Home() {
                   >
                     See All Projects &rarr;
                   </Link>
-                  <div className="mt-8 text-gray-500 dark:text-gray-400">
-                    ... plus <em>this</em> website!
-                  </div>
                 </div>
               </div>
             </article>
@@ -87,6 +85,7 @@ export default function Home() {
                     {experiences.map((exp, index) => (
                       <div key={index} className="grid grid-cols-5 gap-4">
                         <div className="col-span-3">
+                          
                           <div className="font-medium">{exp.company}</div>
                           <div className="text-gray-500 dark:text-gray-400">{exp.role}</div>
                         </div>
@@ -125,9 +124,9 @@ export default function Home() {
                     {/* Song List */}
                     <h1 className="text-md mt-12 font-semibold italic">Recent Jams</h1>
                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-                      {songTrackIDs.map((trackId) => (
-                        <div key={trackId} className="w-full">
-                          <SpotifySong trackId={trackId} />
+                      {songTrackIDs.map((url) => (
+                        <div key={url} className="w-full">
+                          <SpotifySong url={url} />
                         </div>
                       ))}
                     </div>

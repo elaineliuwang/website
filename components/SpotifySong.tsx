@@ -5,15 +5,24 @@ import Image from 'next/image'
 import { Track } from '../data/tracks.interface'
 
 interface SpotifySongProps {
-  trackId: string
+  url: string
+  // trackId: string
 }
 
-export default function SpotifySong({ trackId }: SpotifySongProps) {
-  const [track, setTrack] = useState<Track | null>(null)
+function getSpotifyTrackID(url: string | undefined): string | null {
+  useEffect(() => {
+    if (typeof url !== "string") return null;
+  }, []);
+  const match = url.match(/spotify\.com\/track\/([a-zA-Z0-9]+)/);
+  return match ? match[1] : null;
+}
 
+export default function SpotifySong({ url }: SpotifySongProps) {
+  const [track, setTrack] = useState<Track | null>(null)
+  const trackID = getSpotifyTrackID(url);
   useEffect(() => {
     async function fetchTrack() {
-      const res = await fetch(`/api/spotify/track?id=${trackId}`)
+      const res = await fetch(`/api/spotify/track?id=${trackID}`)
       const data = await res.json()
       if (data.error) {
         console.error('Error fetching track:', data.error)
@@ -23,7 +32,7 @@ export default function SpotifySong({ trackId }: SpotifySongProps) {
     }
 
     fetchTrack()
-  }, [trackId])
+  }, [trackID])
 
   if (!track) return <p>Loading...</p>
 
