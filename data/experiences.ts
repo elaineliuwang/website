@@ -2,7 +2,7 @@ export const experiences = [
   {
     company: 'Amazon',
     role: 'Software Development Engineer Intern',
-    timeframe: '06/2025 - Now',
+    timeframe: '06/2025 - 08/2025',
   },
   {
     company: 'Principal Financial Group',
