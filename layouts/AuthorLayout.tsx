@@ -3,6 +3,9 @@ import { Authors } from '../.contentlayer/generated'
 import SocialIcon from '../components/social-icons'
 import Image from 'next/image'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+
 interface Props {
   children: ReactNode
   content: Omit<Authors, '_id' | '_raw' | 'body'>
@@ -13,10 +16,11 @@ export default function AuthorLayout({ children, content }: Props) {
     name,
     avatar,
     // occupation,
+    location,
     // company,
     email,
-    twitter,
-    instagram,
+    // twitter,
+    // instagram,
     linkedin,
     github,
     youtube,
@@ -42,15 +46,16 @@ export default function AuthorLayout({ children, content }: Props) {
               />
             )}
             <h3 className="pt-4 pb-1 text-2xl leading-8 font-bold tracking-tight">{name}</h3>
-            <div className="text-sm text-gray-500 dark:text-gray-400">{email}</div>
+            <div className="flex items-center text-md text-gray-500 dark:text-gray-400 space-x-2">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-indigo-500" />
+              <span>{location}</span>
+            </div>
             {/* <div className="text-gray-500 dark:text-gray-400">{company}</div> */}
             <div className="flex space-x-3 pt-3">
+              <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="linkedin" href={linkedin} />
               <SocialIcon kind="github" href={github} />
               <SocialIcon kind="youtube" href={youtube} />
-              <SocialIcon kind="instagram" href={instagram} />
-              <SocialIcon kind="x" href={twitter} />
-              {/* <SocialIcon kind="mail" href={`mailto:${email}`} /> */}
             </div>
           </div>
           <div className="prose dark:prose-invert max-w-none pt-10 pb-8 xl:col-span-2">

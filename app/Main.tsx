@@ -12,6 +12,7 @@ import { songTrackIDs } from '../data/songURLs'
 import SpotifySong from '../components/SpotifySong'
 import SpotifyRecent from '../components/SpotifyRecent'
 import { stripHtml } from './utils'
+import SkillsCoursesCerts from '../components/SkillsCoursesCerts'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
                   </dd>
                 </dl>
                 <div className="space-y-5 xl:col-span-3">
-                  {projectsData.slice(0, 3).map((project, index) => (
+                  {projectsData.slice(0, 2).map((project, index) => (
                     <div key={index} className="flex items-center">
                       <Image
                         src={project.imgSrc || ''}
@@ -63,7 +64,7 @@ export default function Home() {
                     href="/projects"
                     className="text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
                   >
-                    See All Projects &rarr;
+                    See All {projectsData.length} Projects &rarr;
                   </Link>
                 </div>
               </div>
@@ -100,42 +101,41 @@ export default function Home() {
             </article>
           </li>
         </ul>
-        {/* Music */}
+        {/* Skills, Courses & Certifications Section */}
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           <li className="py-12">
             <article>
-              <div className="grid grid-cols-4 gap-6 space-y-2">
-                <div className="col-span-1">
-                  <dl>
-                    <dd className="text-lg leading-6 font-medium text-gray-500 dark:text-gray-400">
-                      Music
-                    </dd>
-                  </dl>
-                </div>
-                <div className="col-span-3 space-y-5">
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <h1 className="text-md font-semibold italic">Listening To</h1>
-                      {/* Recently Played */}
-                      <div className="flex items-center space-x-4">
-                        <SpotifyRecent />
-                      </div>
-                    </div>
-                    {/* Song List */}
-                    <h1 className="text-md mt-12 font-semibold italic">Recent Jams</h1>
-                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-                      {songTrackIDs.map((url) => (
-                        <div key={url} className="w-full">
-                          <SpotifySong url={url} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <SkillsCoursesCerts />
             </article>
           </li>
         </ul>
+        {/* Music */}
+        <section className="mt-16 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-lg dark:shadow-lg">
+          <h2 className="text-center text-lg font-medium text-gray-500 dark:text-gray-400 mb-8">
+            What I've Been Listening To...
+          </h2>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+            {/* Recently Played */}
+            <div className="flex flex-col items-center justify-center border-b md:border-b-0 md:border-r dark:border-gray-600 pb-6 md:pb-0 pr-0 md:pr-12">
+              <SpotifyRecent />
+            </div>
+
+            {/* Song Grid */}
+            <div className="flex flex-col items-center">
+              <p className="text-xs text-gray-400 dark:text-gray-500 mb-2 italic">
+                Some Favorites — as of Sep 7, 2025
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {songTrackIDs.slice(0, 4).map((url) => (
+                  <div key={url} className="w-full">
+                    <SpotifySong url={url} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           <li className="py-12"></li>
         </ul>
