@@ -12,6 +12,19 @@ interface Project {
 }
 
 const projectsData: Project[] = [
+    {
+    title: 'clothespin',
+    description: `A sustainability-driven fashion app that helps you get the most out of your closet while cutting down on clothing waste. With just a photo, you can pin your clothes into a digital wardrobe, track how often you wear each piece, and get reminders when items haven’t been worn in a while. The app suggests nearby thrift shops and donation spots, letting you earn points for re-wearing/donating clothes -- creating a circular fashion system. Watch our <a href="https://youtu.be/glGl5sb8sMw" target="_blank" class="text-gray-400 hover:text-indigo-400">demo</a> and fun <a href="https://youtu.be/60EXv8GitFc" target="_blank" class="text-gray-400 hover:text-indigo-400">promo</a> video!`,
+    techStack: [
+      { tech: 'Swift', note: 'iOS frontend' },
+      { tech: 'Firebase', note: 'database for clothing data' },
+      { tech: 'Apple Maps API', note: 'donations tab' },
+      { tech: 'OpenAI (API)', note: 'cartoonize images' },
+      { tech: 'ResNet50 CNN', note: 'image matching' },
+    ],
+    imgSrc: '/static/images/clothespin-img.png',
+    href: 'https://youtu.be/glGl5sb8sMw',
+  },
   {
     title: 'sustain.',
     description: `A full-stack <a href="https://sustain-ten.vercel.app/" target="_blank" class="text-gray-400 hover:text-indigo-400">web application</a> that connects environmentally conscious consumers with sustainable brands. Instead of prioritizing brand names, users can easily discover alternative products that align with their values. The app simplifies the shopping experience with seamless browsing and personalized recommendations.`,
