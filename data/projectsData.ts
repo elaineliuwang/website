@@ -22,7 +22,7 @@ const projectsData: Project[] = [
       { tech: 'OpenAI (API)', note: 'cartoonize images' },
       { tech: 'ResNet50 CNN', note: 'image matching' },
     ],
-    imgSrc: '/static/images/clothespin-img.png',
+    imgSrc: '/static/images/clothespin-img.jpg',
     href: 'https://youtu.be/glGl5sb8sMw',
   },
   {
