@@ -16,9 +16,11 @@ function getSpotifyTrackID(url: string | undefined): string | null {
 
 export default function SpotifySong({ url }: SpotifySongProps) {
   const [track, setTrack] = useState<Track | null>(null)
+  const [isClient, setIsClient] = useState(false)
   const trackID = getSpotifyTrackID(url)
 
   useEffect(() => {
+    setIsClient(true)
     async function fetchTrack() {
       if (!trackID) return
       const res = await fetch(`/api/spotify/track?id=${trackID}`)
@@ -33,7 +35,7 @@ export default function SpotifySong({ url }: SpotifySongProps) {
     fetchTrack()
   }, [trackID])
 
-  if (!track) return <p>Loading...</p>
+  if (!isClient || !track) return <p>Loading...</p>
 
   return (
     <div className="flex flex-col items-center space-y-2 max-w-[10rem]">

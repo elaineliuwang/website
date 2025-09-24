@@ -7,8 +7,10 @@ import { Track } from '../data/tracks.interface'
 export default function SpotifyRecent() {
   const [track, setTrack] = useState<Track | null>(null)
   const [timeAgo, setTimeAgo] = useState<string | null>(null)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     async function fetchRecentTrack() {
       const res = await fetch('/api/spotify/recent')
       const data = await res.json()
@@ -20,7 +22,7 @@ export default function SpotifyRecent() {
     fetchRecentTrack()
   }, [])
 
-  if (!track) return <p>Loading...</p>
+  if (!isClient || !track) return <p>Loading...</p>
 
   const isPlaying = timeAgo === 'Now'
 
