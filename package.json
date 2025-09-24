@@ -109,5 +109,9 @@
     "prebuild-install": {
       "tar-fs": "^2.1.4"
     }
+  },
+  "resolutions": {
+    "tar-fs": "3.1.1",
+    "prebuild-install/tar-fs": "2.1.4"
   }
 }
