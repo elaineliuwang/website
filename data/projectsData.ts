@@ -13,13 +13,23 @@ interface Project {
 
 const projectsData: Project[] = [
     {
+      title: 'Cinema by the Numbers',
+      description: `Semester-long group project building an analytics pipeline to optimize a theater's weekly schedule for maximum revenue. Used SOV.AI data and TMDB/OMDB metadata; engineered 100+ features, forecasted weekly demand using a SARIMA time-series model, estimated per-film demand share using a multinomial logit (MNL) choice model. Then, formulated a mixed-integer optimization model (MIP) scheduling movies across multiple screens under real operational constraints (runtime, buffers, capacity, genre), producing an optimal showtime schedule.`,
+      techStack: [
+        { tech: 'Python', note: 'classic jupyter' },
+        { tech: 'SARIMA', note: 'weekly theater demand forecasting' },
+        { tech: 'MNL/Ridge Regression', note: 'discrete choice modeling' },
+      ],
+      imgSrc: '/static/images/cinemabythenumbers.jpg',
+      href: 'https://drive.google.com/file/d/14uavNdL-FtIMOVZ0RLPTqQSAfz-WsezO/view?usp=sharing',
+    },
+    {
     title: 'clothespin',
     description: `A sustainability-driven fashion app that helps you get the most out of your closet while cutting down on clothing waste. With just a photo, you can pin your clothes into a digital wardrobe, track how often you wear each piece, and get reminders when items haven’t been worn in a while. The app suggests nearby thrift shops and donation spots, letting you earn points for re-wearing/donating clothes -- creating a circular fashion system. Watch our <a href="https://youtu.be/glGl5sb8sMw" target="_blank" class="text-gray-400 hover:text-indigo-400">demo</a> and fun <a href="https://youtu.be/60EXv8GitFc" target="_blank" class="text-gray-400 hover:text-indigo-400">promo</a> video!`,
     techStack: [
       { tech: 'Swift', note: 'iOS frontend' },
       { tech: 'Firebase', note: 'database for clothing data' },
       { tech: 'Apple Maps API', note: 'donations tab' },
-      { tech: 'OpenAI (API)', note: 'cartoonize images' },
       { tech: 'ResNet50 CNN', note: 'image matching' },
     ],
     imgSrc: '/static/images/clothespin-img.jpg',
@@ -45,7 +55,6 @@ const projectsData: Project[] = [
       { tech: 'React/Next.js', note: 'frontend' },
       { tech: 'Python', note: 'script for backend analysis' },
       { tech: 'HuggingFace API', note: 'sentiment evaluation' },
-      { tech: 'TailwindCSS', note: 'styling' },
       { tech: 'Figma', note: 'ui/ux design' },
     ],
     imgSrc: '/static/images/agora_portfolio.jpeg',
