@@ -8,6 +8,12 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Track ID is required' }, { status: 400 })
   }
 
+  // Validate trackId to prevent malformed or unexpected values from being used in the request URL
+  const trackIdPattern = /^[A-Za-z0-9]{10,40}$/
+  if (!trackIdPattern.test(trackId)) {
+    return NextResponse.json({ error: 'Invalid Track ID format' }, { status: 400 })
+  }
+
   try {
     // Fetch new access token (public site and local)
     const tokenRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/token`)
@@ -15,7 +21,7 @@ export async function GET(req: Request) {
     const { access_token } = await tokenRes.json()
 
     // Fetch track details
-    const spotifyRes = await fetch(`https://api.spotify.com/v1/tracks/${trackId}`, {
+    const spotifyRes = await fetch(`https://api.spotify.com/v1/tracks/${encodeURIComponent(trackId)}`, {
       headers: { Authorization: `Bearer ${access_token}` },
     })
 
