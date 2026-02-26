@@ -2426,7 +2426,7 @@
     vfile "^6.0.0"
     vfile-message "^4.0.0"
 
-"@mdx-js/mdx@^2.0.0", "@mdx-js/mdx@^2.2.1":
+"@mdx-js/mdx@^2.0.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-2.3.0.tgz#d65d8c3c28f3f46bb0e7cb3bf7613b39980671a9"
   integrity sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==
@@ -2479,14 +2479,6 @@
     unist-util-stringify-position "^4.0.0"
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
-
-"@mdx-js/react@^2.2.1":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.3.0.tgz#4208bd6d70f0d0831def28ef28c26149b03180b3"
-  integrity sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==
-  dependencies:
-    "@types/mdx" "^2.0.0"
-    "@types/react" ">=16"
 
 "@napi-rs/wasm-runtime@^0.2.11":
   version "0.2.12"
@@ -3740,13 +3732,6 @@
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.7.tgz#50ae4353eaaddc04044279812f52c8c65857dbcb"
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
-
-"@types/react@>=16":
-  version "19.2.8"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.2.8.tgz#307011c9f5973a6abab8e17d0293f48843627994"
-  integrity sha512-3MbSL37jEchWZz2p2mjntRZtPt837ij10ApxKfgmXCTuHWagYg7iA5bqPw6C8BMPfwidlvfPI/fxOc42HLhcyg==
-  dependencies:
-    csstype "^3.2.2"
 
 "@types/react@^18.0.15":
   version "18.3.27"
@@ -9785,16 +9770,6 @@ next-contentlayer2@^0.5.3, next-contentlayer2@^0.5.4:
     "@contentlayer2/core" "0.5.8"
     "@contentlayer2/utils" "0.5.8"
 
-next-mdx-remote@^4.1.0:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-4.4.1.tgz#96b16e2adc54dbcd0a7f204a9a3c3fd269d41abf"
-  integrity sha512-1BvyXaIou6xy3XoNF4yaMZUCb6vD2GTAa5ciOa6WoO+gAUTYsb1K4rI/HSC2ogAWLrb/7VSV52skz07vOzmqIQ==
-  dependencies:
-    "@mdx-js/mdx" "^2.2.1"
-    "@mdx-js/react" "^2.2.1"
-    vfile "^5.3.0"
-    vfile-matter "^3.0.1"
-
 next-seo@^6.1.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-6.8.0.tgz#0265ec75ad5ddca3d2a11dd86534a15065043651"
@@ -12980,15 +12955,6 @@ vfile-location@^5.0.0:
     "@types/unist" "^3.0.0"
     vfile "^6.0.0"
 
-vfile-matter@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/vfile-matter/-/vfile-matter-3.0.1.tgz#85e26088e43aa85c04d42ffa3693635fa2bc5624"
-  integrity sha512-CAAIDwnh6ZdtrqAuxdElUqQRQDQgbbIrYtDYI8gCjXS1qQ+1XdLoK8FIZWxJwn0/I+BkSSZpar3SOgjemQz4fg==
-  dependencies:
-    "@types/js-yaml" "^4.0.0"
-    is-buffer "^2.0.0"
-    js-yaml "^4.0.0"
-
 vfile-message@^3.0.0:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/vfile-message/-/vfile-message-3.1.4.tgz#15a50816ae7d7c2d1fa87090a7f9f96612b59dea"
@@ -13005,7 +12971,7 @@ vfile-message@^4.0.0:
     "@types/unist" "^3.0.0"
     unist-util-stringify-position "^4.0.0"
 
-vfile@^5.0.0, vfile@^5.3.0, vfile@^5.3.2:
+vfile@^5.0.0, vfile@^5.3.2:
   version "5.3.7"
   resolved "https://registry.yarnpkg.com/vfile/-/vfile-5.3.7.tgz#de0677e6683e3380fafc46544cfe603118826ab7"
   integrity sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==
