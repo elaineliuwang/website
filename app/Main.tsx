@@ -124,7 +124,7 @@ export default function Home() {
             {/* Song Grid */}
             <div className="flex flex-col items-center">
               <p className="text-xs text-gray-400 dark:text-gray-500 mb-2 italic">
-                Some Favorites — as of Jan 10, 2026
+                Some Favorites — as of Feb 26, 2026
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {songTrackIDs.slice(0, 4).map((url) => (
