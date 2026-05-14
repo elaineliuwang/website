@@ -13,6 +13,17 @@ interface Project {
 
 const projectsData: Project[] = [
     {
+      title: 'Muddy Buddies: IoT sensor network',
+      description: `Semester-long group project building a low-cost sensor network to estimate real-time seat occupancy at MIT's Muddy Charles Pub. Each chair has a force sensor and an ESP32-C3 that reports occupancy to nearby table gateways over ESP-NOW; tables use WiFi to forward data to a Flask backend and a live dashboard. Chairs auto-assign to the nearest table by RSSI signal strength, so the system is plug-and-play when furniture moves. The dashboard turns raw occupancy into wait-time estimates, without using cameras or phone tracking.`,
+      techStack: [
+        { tech: 'ESP32-C3', note: 'nodes+gateways' },
+        { tech: 'Flask/SQLite', note: 'occupancy state machine + REST API' },
+        { tech: 'React', note: 'live dashboard' },
+      ],
+      imgSrc: '/static/images/muddybuddies.png',
+      href: 'https://docs.google.com/presentation/d/1LL18WDsu7gxZU4soR_--0B4NY5uRTgGCyaaNqESKYCg/edit?usp=sharing',
+    },
+    {
       title: 'Cinema by the Numbers',
       description: `Semester-long group project building an analytics pipeline to optimize a theater's weekly schedule for maximum revenue. Used SOV.AI data and TMDB/OMDB metadata; engineered 100+ features, forecasted weekly demand using a SARIMA time-series model, estimated per-film demand share using a multinomial logit (MNL) choice model. Then, formulated a mixed-integer optimization model (MIP) scheduling movies across multiple screens under real operational constraints (runtime, buffers, capacity, genre), producing an optimal showtime schedule.`,
       techStack: [

@@ -44,7 +44,7 @@ export default function Home() {
                         alt={project.title}
                         width={120}
                         height={120}
-                        className="mr-4 rounded-lg object-cover"
+                        className="mr-4 h-[65px] w-[120px] shrink-0 rounded-lg object-cover"
                       />
                       <div>
                         <Link
@@ -124,7 +124,7 @@ export default function Home() {
             {/* Song Grid */}
             <div className="flex flex-col items-center">
               <p className="text-xs text-gray-400 dark:text-gray-500 mb-2 italic">
-                Some Favorites — as of Feb 26, 2026
+                Some Favorites — as of May 14, 2026
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {songTrackIDs.slice(0, 4).map((url) => (

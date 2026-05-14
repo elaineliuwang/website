@@ -34,6 +34,7 @@ export const courses = [
   "Game Theory",
   "Probability & Statistics",
   "Optimization Methods",
+  "Mobile & Sensor Computing"
 ];
 
 export const certifications = [

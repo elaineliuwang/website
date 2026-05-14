@@ -1,6 +1,6 @@
 export const songTrackIDs = [
-  'https://open.spotify.com/track/77zqs8ucHCSk5jh9TYec4b?si=f8ee3274ae384fc7',
-  'https://open.spotify.com/track/0TlcczkVTGpinpkGJpT81L?si=c6eaa71fc6e74cd4',
-  'https://open.spotify.com/track/03YZnK3XQWKpvo9TyNZzXf?si=2888b9e284e845a6',
-  'https://open.spotify.com/track/6pFmi8RgLNHLB7nOan39RA?si=e62f4cab15544e4b'
+  'https://open.spotify.com/track/35po0dhj4pRkbVDeooNVBW?si=7d3e076e0c8643ec',
+  'https://open.spotify.com/track/5f9JpyT70rksel4mcQg0a7?si=04b3cd2e464742b2',
+  'https://open.spotify.com/track/1FJKSVxq4IBtc3LPPCgLwM?si=f899022e04fe411f',
+  'https://open.spotify.com/track/2iFJksThouznfkT0094RK2?si=a70693ba510e45cc'
 ]
