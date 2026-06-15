@@ -31,7 +31,7 @@ export const experiences = [
   },
   {
     company: 'MIT Media Lab',
-    url: 'https://www.media.mit.edu',
+    url: 'https://www.media.mit.edu/groups/city-science/overview/',
     role: 'Undergraduate Researcher for City Science Group',
     icon: 'medialab',
   },
