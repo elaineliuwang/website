@@ -1,6 +1,8 @@
+export const favoritesDate = 'June 15, 2026'
+
 export const songTrackIDs = [
-  'https://open.spotify.com/track/35po0dhj4pRkbVDeooNVBW?si=7d3e076e0c8643ec',
-  'https://open.spotify.com/track/5f9JpyT70rksel4mcQg0a7?si=04b3cd2e464742b2',
-  'https://open.spotify.com/track/1FJKSVxq4IBtc3LPPCgLwM?si=f899022e04fe411f',
-  'https://open.spotify.com/track/2iFJksThouznfkT0094RK2?si=a70693ba510e45cc'
+  'https://open.spotify.com/track/1W7023CuJrWPbD4q2Sipoh?si=7f2ea1a8778943f2',
+  'https://open.spotify.com/track/4A5NMoIJitDs7UPyswy0JI?si=a7aabb2ae8974b74',
+  'https://open.spotify.com/track/59wlTaYOL5tDUgXnbBQ3my?si=2f67670fb6124bd4',
+  'https://open.spotify.com/track/4bDIAWaOBGAAk95nyXI6zJ?si=d8026b28ed764be3'
 ]

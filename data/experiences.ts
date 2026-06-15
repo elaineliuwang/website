@@ -1,27 +1,52 @@
 export const experiences = [
   {
     company: 'Amazon',
+    url: 'https://www.amazon.com',
     role: 'Software Development Engineer Intern',
-    timeframe: '06/2025 - 08/2025',
+    icon: 'amazon',
   },
   {
     company: 'Principal Financial Group',
+    url: 'https://www.principal.com',
     role: 'Software Engineer Intern',
-    timeframe: '05/2024 - 08/2024',
+    icon: 'principal',
   },
   {
-    company: 'MIT Center for Transportation & Logistics [CAVE Lab]',
+    company: 'MIT CAVE Lab',
+    url: 'https://cave.mit.edu',
     role: 'Undergraduate Researcher',
-    timeframe: '09/2023 - 05/2024',
+    icon: 'cave',
   },
   {
     company: 'City of Cape Town',
+    url: 'https://www.capetown.gov.za',
     role: 'Data Science Intern',
-    timeframe: '06/2023 - 08/2023',
+    icon: 'capetown',
   },
   {
-    company: 'MIT Media Lab [City Science Group]',
-    role: 'Undergraduate Researcher',
-    timeframe: '01/2023 - 03/2023',
+    company: 'MIT Media Lab',
+    url: 'https://www.media.mit.edu',
+    role: 'Undergraduate Researcher for City Science Group',
+    icon: 'medialab',
   },
+]
+
+export const courses = [
+  'Software Construction',
+  'Computer Systems Engineering',
+  'Computer Systems & Society',
+  'Computation Structures',
+  'Data Structures & Algorithms',
+  'Design & Analysis of Algorithms',
+  'Machine Learning',
+  'Algorithmic & Human Decision-Making',
+  'AI-Driven Analytics of Operations Management',
+  'Game Theory',
+  'Probability & Statistics',
+  'Optimization Methods',
+  'Mobile & Sensor Computing',
+]
+
+export const certifications = [
+  'AWS Certified Cloud Practitioner',
 ]

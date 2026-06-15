@@ -36,32 +36,29 @@ export default function SpotifySong({ url }: SpotifySongProps) {
   if (!track) return <p>Loading...</p>
 
   return (
-    <div className="flex flex-col items-center space-y-2 max-w-[10rem]">
+    <div className="flex flex-col items-center space-y-1 max-w-[8rem]">
       <a
         href={track.external_urls.spotify}
         target="_blank"
         rel="noopener noreferrer"
-        className="h-24 w-24 transform transition-transform hover:scale-105"
+        className="block w-[88px] shrink-0 transform transition-transform hover:scale-105"
       >
-        <div className="h-full w-full">
-          {track.album?.images?.[0]?.url ? (
-            <Image
-              src={track.album.images[0].url}
-              alt={track.name}
-              width={100}
-              height={100}
-              className="rounded-md shadow-sm dark:shadow-md"
-            />
-          ) : (
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              No album art available
-            </p>
-          )}
-        </div>
+        {track.album?.images?.[0]?.url ? (
+          <Image
+            src={track.album.images[0].url}
+            alt={track.name}
+            width={88}
+            height={88}
+            className="block h-auto w-[88px] rounded-md shadow-sm dark:shadow-md"
+          />
+        ) : (
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            No album art available
+          </p>
+        )}
       </a>
 
-      {/* Track Info BELOW Album Cover */}
-      <div className="text-center w-full">
+      <div className="text-center w-28">
         <h2 className="text-sm font-medium truncate">{track.name || 'Unknown Song'}</h2>
         <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
           {track.artists?.length

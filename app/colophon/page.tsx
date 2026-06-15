@@ -6,12 +6,9 @@ export default function Colophon() {
   return (
     <div className="space-y-4 p-8">
       <h1 className="text-2xl font-semibold">Colophon</h1>
-      <p className="text-lg text-gray-500 dark:text-gray-400">how I made this website.</p>
-      {/* Horizontal Divider */}
-      <hr className="border-t border-gray-200 dark:border-gray-700" />
+      <p className="text-sm font-bold italic text-gray-500 dark:text-gray-400">how I made this website.</p>
       <div className="mt-6 space-y-2">
-        <h2 className="text-lg font-medium text-gray-800 dark:text-gray-100">Tech Stack</h2>
-        <ul className="text-md text-gray-500 dark:text-gray-400">
+        <ul className="text-sm text-gray-500 dark:text-gray-400">
           <li>
             Built with <TechStackItem name="React" url="https://reactjs.org/" /> &{' '}
             <TechStackItem name="Next.js" url="https://nextjs.org/" />
@@ -24,6 +21,13 @@ export default function Colophon() {
             <TechStackItem
               name="Spotify API"
               url="https://developer.spotify.com/documentation/web-api"
+            />
+          </li>
+          <li>
+            Videos pulled from{' '}
+            <TechStackItem
+              name="YouTube RSS"
+              url="https://developers.google.com/youtube/v3/docs/channels"
             />
           </li>
           <li>

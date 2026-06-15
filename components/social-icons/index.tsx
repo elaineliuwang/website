@@ -1,31 +1,19 @@
-import {
-  Mail,
-  Github,
-  Facebook,
-  Youtube,
-  Linkedin,
-  Twitter,
-  X,
-  Mastodon,
-  Threads,
-  Instagram,
-  Medium,
-  Bluesky,
-} from './icons'
+import { FaGithub, FaLinkedin, FaYoutube, FaFacebookF, FaXTwitter, FaMastodon, FaThreads, FaInstagram, FaMedium, FaBluesky } from 'react-icons/fa6'
+import { HiMail } from 'react-icons/hi'
+import { IconType } from 'react-icons'
 
-const components = {
-  mail: Mail,
-  github: Github,
-  facebook: Facebook,
-  youtube: Youtube,
-  linkedin: Linkedin,
-  twitter: Twitter,
-  x: X,
-  mastodon: Mastodon,
-  threads: Threads,
-  instagram: Instagram,
-  medium: Medium,
-  bluesky: Bluesky,
+const components: Record<string, IconType> = {
+  mail: HiMail,
+  github: FaGithub,
+  youtube: FaYoutube,
+  linkedin: FaLinkedin,
+  facebook: FaFacebookF,
+  x: FaXTwitter,
+  mastodon: FaMastodon,
+  threads: FaThreads,
+  instagram: FaInstagram,
+  medium: FaMedium,
+  bluesky: FaBluesky,
 }
 
 type SocialIconProps = {
@@ -41,7 +29,8 @@ const SocialIcon = ({ kind, href, size = 6 }: SocialIconProps) => {
   )
     return null
 
-  const SocialSvg = components[kind]
+  const Icon = components[kind]
+  if (!Icon) return null
 
   return (
     <a
@@ -51,8 +40,8 @@ const SocialIcon = ({ kind, href, size = 6 }: SocialIconProps) => {
       href={href}
     >
       <span className="sr-only">{kind}</span>
-      <SocialSvg
-        className={`fill-current text-gray-700 hover:text-indigo-500 dark:text-gray-200 dark:hover:text-indigo-400 h-${size} w-${size}`}
+      <Icon
+        className={`text-gray-400 hover:text-indigo-500 dark:text-gray-500 dark:hover:text-indigo-400 h-${size} w-${size}`}
       />
     </a>
   )

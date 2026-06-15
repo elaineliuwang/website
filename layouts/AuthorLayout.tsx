@@ -3,62 +3,35 @@ import { Authors } from '../.contentlayer/generated'
 import SocialIcon from '../components/social-icons'
 import Image from 'next/image'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-
 interface Props {
   children: ReactNode
   content: Omit<Authors, '_id' | '_raw' | 'body'>
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-  const {
-    name,
-    avatar,
-    // occupation,
-    location,
-    // company,
-    email,
-    // twitter,
-    // instagram,
-    linkedin,
-    github,
-    youtube,
-  } = content
+  const { name, avatar, linkedin, github } = content
 
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        {/* <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            About
-          </h1>
-        </div> */}
+      <div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center space-x-2 pt-8">
             {avatar && (
               <Image
                 src={avatar}
                 alt="avatar"
-                width={192}
-                height={192}
-                className="h-50 w-50 rounded-full"
+                width={150}
+                height={150}
+                className="h-30 w-30 rounded-full"
               />
             )}
-            <h3 className="pt-4 pb-1 text-2xl leading-8 font-bold tracking-tight">{name}</h3>
-            <div className="flex items-center text-md text-gray-500 dark:text-gray-400 space-x-2">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-indigo-500" />
-              <span>{location}</span>
-            </div>
-            {/* <div className="text-gray-500 dark:text-gray-400">{company}</div> */}
-            <div className="flex space-x-3 pt-3">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="youtube" href={youtube} />
+            <h3 className="pt-2 pb-1 text-xl leading-8 font-bold tracking-tight">{name}</h3>
+            <div className="flex space-x-3 pt-1">
+              <SocialIcon kind="linkedin" href={linkedin} size={6} />
+              <SocialIcon kind="github" href={github} size={6} />
             </div>
           </div>
-          <div className="prose dark:prose-invert max-w-none pt-10 pb-8 xl:col-span-2">
+          <div className="prose dark:prose-invert max-w-none pt-10 xl:col-span-2">
             {children}
           </div>
         </div>

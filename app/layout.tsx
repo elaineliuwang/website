@@ -3,7 +3,6 @@ import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Space_Grotesk } from 'next/font/google'
-// import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '../components/Header'
 import SectionContainer from '../components/SectionContainer'
@@ -87,10 +86,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Analytics/>
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
+              <div className="flex flex-col sm:flex-row">
+                <Header />
+                <div className="flex flex-1 flex-col sm:pt-16">
+                  <main className="flex-1 sm:border-l sm:border-gray-200 sm:pl-8 dark:sm:border-gray-800">{children}</main>
+                  <Footer />
+                </div>
+              </div>
             </SearchProvider>
-            <Footer />
           </SectionContainer>
         </ThemeProviders>
       </body>

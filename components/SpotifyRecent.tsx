@@ -28,12 +28,9 @@ export default function SpotifyRecent() {
     <div className="flex flex-col items-center space-y-2">
       {/* Pill */}
       <span
-        className={`mb-1 rounded-full px-2 py-1 text-xs font-semibold bg-gray-200 text-gray-500 
-        dark:bg-gray-700 dark:text-gray-300 flex items-center gap-1`}
+        className="mb-2 rounded-full px-2 py-0.5 text-[10px] font-normal text-gray-500 bg-gray-200/70 dark:bg-gray-700/70 dark:text-gray-400"
       >
-        {isPlaying && (
-          <span className="h-2 w-2 bg-indigo-500 rounded-full animate-pulse"></span>
-        )}
+
         {isPlaying ? 'Now Playing' : timeAgo}
       </span>
 
@@ -41,29 +38,38 @@ export default function SpotifyRecent() {
         href={track.external_urls.spotify}
         target="_blank"
         rel="noopener noreferrer"
-        className="h-32 w-32 transform transition-transform hover:scale-105"
+        className="relative block w-28 shrink-0 transform transition-transform hover:scale-105"
       >
-        <div className="h-full w-full">
-          {track.album?.images?.[0]?.url ? (
+        {track.album?.images?.[0]?.url ? (
+          <>
+            {isPlaying && (
+              <Image
+                src={track.album.images[0].url}
+                alt=""
+                width={112}
+                height={112}
+                aria-hidden
+                className="absolute inset-0 h-auto w-28 scale-[1.03] rounded-md blur-sm brightness-75 dark:brightness-125 animate-album-pulse"
+              />
+            )}
             <Image
               src={track.album.images[0].url}
               alt={track.name}
-              width={250}
-              height={250}
-              className="rounded-md shadow-sm dark:shadow-md"
+              width={112}
+              height={112}
+              className="relative block h-auto w-28 rounded-md shadow-sm dark:shadow-md"
             />
-          ) : (
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              No album art available
-            </p>
-          )}
-        </div>
+          </>
+        ) : (
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            No album art available
+          </p>
+        )}
       </a>
 
-      {/* Track Info BELOW Album Cover */}
-      <div className="text-center w-full">
-        <h2 className="text-md font-medium">{track.name || 'Unknown Song'}</h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+      <div className="text-center w-36">
+        <h2 className="text-sm font-medium truncate">{track.name || 'Unknown Song'}</h2>
+        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
           {track.artists?.length
             ? track.artists.map((artist) => artist.name).join(', ')
             : 'Unknown Artist'}
