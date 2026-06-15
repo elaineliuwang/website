@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { experiences, courses, certifications } from '../../data/experiences'
 import { genPageMetadata } from '../seo'
 import { FaAmazon, FaCarSide } from 'react-icons/fa6'
-import { FiDollarSign, FiGlobe, FiMap } from 'react-icons/fi'
+import { FiActivity, FiDollarSign, FiGlobe, FiMap } from 'react-icons/fi'
 import { IconType } from 'react-icons'
 
 export const metadata = genPageMetadata({ title: 'Resume' })
 
 const iconMap: Record<string, IconType> = {
+  startup: FiActivity,
   amazon: FaAmazon,
   principal: FiDollarSign,
   cave: FiMap,
@@ -27,13 +28,17 @@ export default function Resume() {
               <li key={exp.company} className="flex items-center gap-3">
                 {Icon && <Icon className="h-4 w-4 shrink-0 text-gray-400 dark:text-gray-500" />}
                 <div>
-                  <Link
-                    href={exp.url}
-                    target="_blank"
-                    className="text-gray-700 hover:text-indigo-500 hover:underline dark:text-gray-300 dark:hover:text-indigo-400"
-                  >
-                    {exp.company}
-                  </Link>
+                  {exp.url ? (
+                    <Link
+                      href={exp.url}
+                      target="_blank"
+                      className="text-gray-700 hover:text-indigo-500 hover:underline dark:text-gray-300 dark:hover:text-indigo-400"
+                    >
+                      {exp.company}
+                    </Link>
+                  ) : (
+                    <span className="text-gray-700 dark:text-gray-300">{exp.company}</span>
+                  )}
                   <span className="block text-sm text-gray-400 sm:ml-2 sm:inline dark:text-gray-500">{exp.role}</span>
                 </div>
               </li>

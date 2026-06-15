@@ -1,5 +1,11 @@
 export const experiences = [
   {
+    company: 'Predictive ML for IVF Startup',
+    url: '',
+    role: 'Engineer, with MIT Sloan Faculty',
+    icon: 'startup',
+  },
+  {
     company: 'Amazon',
     url: 'https://www.amazon.com',
     role: 'Software Development Engineer Intern',
