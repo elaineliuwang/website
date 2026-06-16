@@ -24,13 +24,6 @@ export default function Colophon() {
             />
           </li>
           <li>
-            Videos pulled from{' '}
-            <TechStackItem
-              name="YouTube RSS"
-              url="https://developers.google.com/youtube/v3/docs/channels"
-            />
-          </li>
-          <li>
             Adapted from{' '}
             <TechStackItem
               name="Tailwind Starter Blog"

@@ -1,13 +1,10 @@
 import Link from 'next/link'
-import { getTravelVideos } from '../../lib/youtube'
+import { videos } from '../../data/videos'
 import { genPageMetadata } from '../seo'
 
 export const metadata = genPageMetadata({ title: 'Videos' })
-export const revalidate = 3600
 
-export default async function Videos() {
-  const videos = await getTravelVideos()
-
+export default function Videos() {
   return (
     <div className="py-8">
       <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
@@ -21,7 +18,7 @@ export default async function Videos() {
         {videos.map((video) => (
           <Link
             key={video.id}
-            href={video.url}
+            href={`https://www.youtube.com/watch?v=${video.id}`}
             target="_blank"
             className="group"
           >
