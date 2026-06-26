@@ -8,7 +8,7 @@ export default function Videos() {
   return (
     <div className="py-8">
       <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-        I like filming and editing travel videos. Mostly shot on a Sony ZV-1, sometimes GoPro sometimes iPhone, all edited in Final Cut Pro.
+        I like filming and editing travel videos. Mostly shot on a Sony ZV-1, all edited in Final Cut Pro.
       </p>
       <p className="mb-3 flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500">
         most recent
