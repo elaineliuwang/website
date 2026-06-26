@@ -2,7 +2,7 @@ import '../css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Space_Grotesk } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '../components/Header'
 import SectionContainer from '../components/SectionContainer'
@@ -12,10 +12,10 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/react"
 
-const space_grotesk = Space_Grotesk({
+const nunito_sans = Nunito_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-grotesk',
+  variable: '--font-nunito-sans',
 })
 
 export const metadata: Metadata = {
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${nunito_sans.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link
