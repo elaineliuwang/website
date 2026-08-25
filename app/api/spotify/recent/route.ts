@@ -16,9 +16,11 @@ function timeAgo(timestamp) {
 
 export async function GET() {
   try {
-    // Fetch new access token (public site and local)
-    const tokenRes = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/token`)
-    // const tokenRes = await fetch(`${process.env.LOCAL_SITE_URL}/api/auth/token`)
+    const tokenBaseUrl =
+      process.env.NODE_ENV === 'development'
+        ? process.env.LOCAL_SITE_URL
+        : process.env.NEXT_PUBLIC_SITE_URL
+    const tokenRes = await fetch(`${tokenBaseUrl}/api/auth/token`)
     const { access_token } = await tokenRes.json()
 
     // Check if currently playing

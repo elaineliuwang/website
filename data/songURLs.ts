@@ -1,8 +1,8 @@
-export const favoritesDate = 'June 15, 2026'
+export const favoritesDate = 'Aug 24, 2026'
 
 export const songTrackIDs = [
-  'https://open.spotify.com/track/1W7023CuJrWPbD4q2Sipoh?si=7f2ea1a8778943f2',
-  'https://open.spotify.com/track/4A5NMoIJitDs7UPyswy0JI?si=a7aabb2ae8974b74',
-  'https://open.spotify.com/track/59wlTaYOL5tDUgXnbBQ3my?si=2f67670fb6124bd4',
-  'https://open.spotify.com/track/4bDIAWaOBGAAk95nyXI6zJ?si=d8026b28ed764be3'
+  'https://open.spotify.com/track/53a2Gvqo4z5QBumJ4JXa53?si=c0db78446acc404f',
+  'https://open.spotify.com/track/1EdJH24G1CBZAohgITohGM?si=6bd9f9613f2545b6',
+  'https://open.spotify.com/track/4fEUmNN8KK5sNqvKjBstKg?si=a2ee71f2726e4f63',
+  'https://open.spotify.com/track/3ddDFIHXxdx1dWsqLaz5Ac?si=eee3c889b6d54033'
 ]
