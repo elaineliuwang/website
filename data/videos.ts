@@ -7,6 +7,7 @@ export interface Video {
 }
 
 export const videos: Video[] = [
+  { id: '_srfZ5JLXd0', location: 'europe 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇫🇷🇳🇱🇩🇪🇨🇭' },
   { id: 'HKhMDWrmV1I', location: 'everglades & fl keys' },
   { id: '1ZSlba3uvHw', location: 'silver springs state park' },
   { id: 'QNjx4Jdiz9w', location: 'fall foliage in nh & vt' },
