@@ -1,5 +1,4 @@
 module.exports = {
-    siteUrl: 'https://elaineliuwang.com',
-    generateRobotsTxt: true, 
-  }
-  
+  siteUrl: 'https://www.elaineliuwang.com',
+  generateRobotsTxt: true,
+}

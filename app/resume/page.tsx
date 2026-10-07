@@ -86,7 +86,6 @@ export default function Resume() {
           ))}
         </ul>
       </section>
- 
 
       {certifications.length > 0 && (
         <section>

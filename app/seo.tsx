@@ -10,7 +10,6 @@ interface PageSEOProps {
 }
 
 export function genPageMetadata({ title, description, image, ...rest }: PageSEOProps): Metadata {
-  console.log("siteMetadata:", siteMetadata);
   return {
     title,
     description: description || siteMetadata.description,
