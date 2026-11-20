@@ -1,22 +1,15 @@
 'use client'
 
-import { Authors, allAuthors } from '../.contentlayer/generated'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '../layouts/AuthorLayout'
-import { coreContent } from 'pliny/utils/contentlayer'
+import { author, bio } from '../data/author'
 import { songTrackIDs, favoritesDate } from '../data/songURLs'
 import SpotifySong from '../components/SpotifySong'
 import SpotifyRecent from '../components/SpotifyRecent'
 
 export default function Home() {
-  const author = allAuthors.find((p) => p.slug === 'default') as Authors
-  const mainContent = coreContent(author)
-
   return (
     <>
-      <AuthorLayout content={mainContent}>
-        <MDXLayoutRenderer code={author.body.code} />
-      </AuthorLayout>
+      <AuthorLayout content={author}>{bio}</AuthorLayout>
       <div className="flex justify-center">
         <section className="my-12 inline-block rounded-xl bg-gray-50 p-5 shadow-sm dark:bg-gray-800 dark:shadow-md">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">

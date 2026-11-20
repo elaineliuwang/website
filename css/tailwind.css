@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 @config '../tailwind.config.js';
-@source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* @tailwind base; */
