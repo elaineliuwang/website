@@ -4,7 +4,7 @@ export const experiences = [
     url: 'https://www.amazon.com',
     role: 'Software Development Engineer',
     icon: 'amazon',
-    years: '2026-present',
+    years: 'Now',
     current: true,
   },
   {
@@ -12,21 +12,21 @@ export const experiences = [
     url: '',
     // role: 'Engineer, with Sloan faculty',
     icon: 'startup',
-    years: '2026',
+    years: 'Spring 2026',
   },
   {
     company: 'Amazon',
     url: 'https://www.amazon.com',
     // role: 'Software Development Engineer',
     icon: 'amazon',
-    years: '2026-present',
+    years: 'Summer 2025',
   },
   {
     company: 'Principal Financial Group',
     url: 'https://www.principal.com',
     // role: 'Software Engineer Intern',
     icon: 'principal',
-    years: '2024',
+    years: 'Summer 2024',
   },
   {
     company: 'MIT CAVE Lab',
@@ -40,7 +40,7 @@ export const experiences = [
     url: 'https://www.capetown.gov.za',
     // role: 'Sustainable Energy Markets Data Intern',
     icon: 'capetown',
-    years: '2023',
+    years: 'Summer 2023',
   },
   {
     company: 'MIT Media Lab (City Science Group)',
