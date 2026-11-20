@@ -1,9 +1,9 @@
+// Sections on the single-page homepage. `id` matches the section's element id.
 const headerNavLinks = [
-  { href: '/', title: 'Home' },
-  { href: '/resume', title: 'Resume' },
-  { href: '/projects', title: 'Projects' },
-  { href: '/videos', title: 'Videos' },
-  { href: '/colophon', title: '' },
+  { id: 'about', href: '/#about', title: 'About' },
+  { id: 'resume', href: '/#resume', title: 'Resume' },
+  { id: 'projects', href: '/#projects', title: 'Projects' },
+  { id: 'videos', href: '/#videos', title: 'Videos' },
 ]
 
 export default headerNavLinks

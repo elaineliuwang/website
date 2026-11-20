@@ -1,11 +1,8 @@
 import Link from 'next/link'
-import { experiences, courseGroups, certifications } from '../../data/experiences'
-import { genPageMetadata } from '../seo'
+import { experiences, courseGroups } from '../../data/experiences'
 import { FaAmazon, FaCarSide } from 'react-icons/fa6'
 import { FiActivity, FiDollarSign, FiGlobe, FiMap } from 'react-icons/fi'
 import { IconType } from 'react-icons'
-
-export const metadata = genPageMetadata({ title: 'Resume' })
 
 const iconMap: Record<string, IconType> = {
   startup: FiActivity,
@@ -16,11 +13,11 @@ const iconMap: Record<string, IconType> = {
   medialab: FaCarSide,
 }
 
-export default function Resume() {
+export default function WorkSection() {
   return (
-    <div className="space-y-12 py-8">
+    <div className="space-y-12">
       <section>
-        <h2 className="mb-4 text-sm font-medium text-gray-400 dark:text-gray-500">Work</h2>
+        <h3 className="mb-4 text-sm font-medium text-gray-400 dark:text-gray-500">Work</h3>
         <ul className="space-y-3">
           {experiences.map((exp) => {
             const Icon = iconMap[exp.icon]
@@ -76,7 +73,9 @@ export default function Resume() {
       </section>
 
       <section>
-        <h2 className="mb-4 text-sm font-medium text-gray-400 dark:text-gray-500">Coursework @ MIT</h2>
+        <h3 className="mb-4 text-sm font-medium text-gray-400 dark:text-gray-500">
+          Coursework @ MIT
+        </h3>
         <ul className="space-y-3">
           {courseGroups.map((group) => (
             <li key={group.label}>
@@ -86,17 +85,6 @@ export default function Resume() {
           ))}
         </ul>
       </section>
-
-      {certifications.length > 0 && (
-        <section>
-          <h2 className="mb-4 text-sm font-medium text-gray-400 dark:text-gray-500">Certifications</h2>
-          <ul className="list-disc ml-4 space-y-1 text-sm text-gray-600 dark:text-gray-400">
-            {certifications.map((cert) => (
-              <li key={cert}>{cert}</li>
-            ))}
-          </ul>
-        </section>
-      )}
     </div>
   )
 }

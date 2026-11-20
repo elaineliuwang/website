@@ -13,9 +13,6 @@ export default function Footer() {
           {author?.location || 'Location'}
         </span>
         <div className="flex items-center gap-3">
-          <a href="/colophon" className="hover:text-gray-600 dark:hover:text-gray-300">
-            Colophon
-          </a>
           <ThemeSwitch />
         </div>
       </div>

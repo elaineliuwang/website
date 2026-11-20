@@ -43,3 +43,5 @@ sitemap-*.xml
 # misc
 .DS_Store
 *.pem
+# typescript
+tsconfig.tsbuildinfo

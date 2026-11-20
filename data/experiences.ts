@@ -2,24 +2,17 @@ export const experiences = [
   {
     company: 'Amazon',
     url: 'https://www.amazon.com',
-    role: 'Software Development Engineer',
+    role: 'Software Development Engineer (Intern, 2025)',
     icon: 'amazon',
-    years: '2026 - present',
+    years: '2026-present',
     current: true,
   },
   {
     company: 'IVF Startup',
     url: '',
-    role: 'Engineer, with MIT Sloan Faculty',
+    role: 'Engineer, with Sloan faculty',
     icon: 'startup',
     years: '2026',
-  },
-  {
-    company: 'Amazon',
-    url: 'https://www.amazon.com',
-    role: 'Software Development Engineer Intern',
-    icon: 'amazon',
-    years: '2025',
   },
   {
     company: 'Principal Financial Group',
@@ -33,12 +26,12 @@ export const experiences = [
     url: 'https://cave.mit.edu',
     role: 'Undergraduate Researcher',
     icon: 'cave',
-    years: '2023 – 2024',
+    years: '2023-2024',
   },
   {
     company: 'City of Cape Town',
     url: 'https://www.capetown.gov.za',
-    role: 'Data Science Intern',
+    role: 'Sustainable Energy Markets Data Intern',
     icon: 'capetown',
     years: '2023',
   },
@@ -83,8 +76,4 @@ export const courseGroups = [
       'Product Management',
     ],
   },
-]
-
-export const certifications = [
-  'AWS Certified Cloud Practitioner',
 ]

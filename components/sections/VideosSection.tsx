@@ -1,20 +1,13 @@
 import Link from 'next/link'
 import { videos } from '../../data/videos'
-import { genPageMetadata } from '../seo'
 
-export const metadata = genPageMetadata({ title: 'Videos' })
-
-export default function Videos() {
+export default function VideosSection() {
   return (
-    <div className="py-8">
+    <div>
       <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-        I like filming and editing travel videos. Mostly shot on a Sony ZV-1, all edited in Final Cut Pro.
+        I like filming and editing travel videos
       </p>
-      <p className="mb-3 flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500">
-        most recent
-        <span className="text-[10px]">&#9660;</span>
-      </p>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {videos.map((video) => (
           <Link
             key={video.id}
@@ -27,10 +20,11 @@ export default function Videos() {
               <img
                 src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                 alt={video.location}
+                loading="lazy"
                 className="h-full w-full scale-110 object-cover transition-transform group-hover:scale-[1.15]"
               />
             </div>
-            <p className="mt-1.5 text-sm font-semibold text-gray-700 group-hover:text-indigo-500 dark:text-gray-300 dark:group-hover:text-indigo-400">
+            <p className="mt-1 text-xs font-medium text-gray-700 group-hover:text-indigo-500 dark:text-gray-300 dark:group-hover:text-indigo-400">
               {video.location}
             </p>
           </Link>
