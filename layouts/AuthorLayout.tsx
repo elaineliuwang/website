@@ -25,10 +25,10 @@ export default function AuthorLayout({ children, content }: Props) {
                 className="h-30 w-30 rounded-full"
               />
             )}
-            <h3 className="pt-2 pb-1 text-xl leading-8 font-medium tracking-tight">{name}</h3>
-            <div className="flex space-x-2">
-              <SocialIcon kind="linkedin" href={linkedin} size={5} />
-              <SocialIcon kind="github" href={github} size={5} />
+            <h3 className="pt-2 text-xl leading-8 font-medium tracking-tight">{name}</h3>
+            <div className="flex space-x-1">
+              <SocialIcon kind="linkedin" href={linkedin} size={6} />
+              <SocialIcon kind="github" href={github} size={6} />
             </div>
           </div>
           <div className="prose dark:prose-invert max-w-none pt-10 xl:col-span-2">
